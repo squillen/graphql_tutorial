@@ -68,6 +68,7 @@ async function post(parent, args, context, info) {
     data: {
       url: args.url,
       description: args.description,
+      createdAt: new Date(),
       postedBy: { connect: { id: userId } },
     },
   });
